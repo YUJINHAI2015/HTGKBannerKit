@@ -1,5 +1,5 @@
 PODS:
-  - HTGKBannerKit (0.1.0)
+  - HTGKBannerKit (0.2.0)
 
 DEPENDENCIES:
   - HTGKBannerKit (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  HTGKBannerKit: d86c01563e0169840ed1abe944800776e373caec
+  HTGKBannerKit: 9d0f7a1d03cde35360eebe28f6d360b32593ea0f
 
 PODFILE CHECKSUM: 98901891f4d6624900422234dba07094f352f2bb
 

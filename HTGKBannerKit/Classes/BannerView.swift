@@ -61,7 +61,7 @@ public class BannerView: UIView {
     // 定时器
     private lazy var timer: Timer = {
         let timer = Timer(timeInterval: timeInterval, target: self, selector: #selector(updateCollectionViewAutoScrolling), userInfo: nil, repeats: true)
-        RunLoop.main.add(timer, forMode: .defaultRunLoopMode)
+        RunLoop.main.add(timer, forMode: RunLoop.Mode.default)
         return timer
     }()
 
