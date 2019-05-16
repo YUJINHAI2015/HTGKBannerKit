@@ -1,8 +1,8 @@
 {
   "name": "HTGKBannerKit",
   "version": "0.1.0",
-  "summary": "A short description of HTGKBannerKit.",
-  "description": "TODO: Add long description of the pod here.",
+  "summary": "简单的图片轮播图框架",
+  "description": "这是一个简单的轮播图，现阶段还不完善，后续继续优化。",
   "homepage": "https://github.com/YUJINHAI2015/HTGKBannerKit",
   "license": {
     "type": "MIT",
@@ -16,7 +16,8 @@
     "tag": "0.1.0"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "9.0"
   },
-  "source_files": "HTGKBannerKit/Classes/**/*"
+  "source_files": "HTGKBannerKit/Classes/**/*",
+  "swift_version": "5.0"
 }
