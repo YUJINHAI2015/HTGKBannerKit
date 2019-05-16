@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'HTGKBannerKit_Example' do
+  pod 'HTGKBannerKit', :path => '../'
+
+  target 'HTGKBannerKit_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
