@@ -1,0 +1,6 @@
+framework module HTGKBannerKit {
+  umbrella header "HTGKBannerKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

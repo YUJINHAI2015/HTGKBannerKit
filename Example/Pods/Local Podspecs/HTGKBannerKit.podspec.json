@@ -1,0 +1,22 @@
+{
+  "name": "HTGKBannerKit",
+  "version": "0.1.0",
+  "summary": "A short description of HTGKBannerKit.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/YUJINHAI2015/HTGKBannerKit",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "YUJINHAI2015": "15088132368@163.com"
+  },
+  "source": {
+    "git": "https://github.com/YUJINHAI2015/HTGKBannerKit.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "HTGKBannerKit/Classes/**/*"
+}

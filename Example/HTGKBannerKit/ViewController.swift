@@ -8,17 +8,25 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+import HTGKBannerKit
 
+class ViewController: UIViewController, BannerDelegate {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.initUI()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func initUI() {
+        let bannerView = BannerView.init(frame: CGRect.init(x: 0, y: 100, width: self.view.frame.size.width, height: 150))
+        bannerView.imageNames = ["ad2","Rectangle Copy","ad2","Rectangle Copy"]
+        bannerView.delegate = self
+        self.view.addSubview(bannerView)
+        
     }
-
+    
+    func bannerView(_ bannerView: BannerView, didSelectItemAt index: Int) {
+        print(index)
+    }
+    
 }
 

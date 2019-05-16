@@ -1,0 +1,789 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00AF4D0BA5507132A882C12187DB6291 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
+		1696BF68DB8CF164F5A75DD2F11ABC70 /* HTGKBannerKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 091A1F8260DFEF2A20A6AFCA81EF14CB /* HTGKBannerKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1FBA93B3604C25CBF6054479C18B64D5 /* Pods-HTGKBannerKit_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1514A16D0E5027D094A725BF78FCA90A /* Pods-HTGKBannerKit_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24EFBF7D228D7F2A006ABE06 /* BannerPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24EFBF79228D7F2A006ABE06 /* BannerPageControl.swift */; };
+		24EFBF7E228D7F2A006ABE06 /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24EFBF7A228D7F2A006ABE06 /* BannerView.swift */; };
+		24EFBF7F228D7F2A006ABE06 /* BannerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24EFBF7B228D7F2A006ABE06 /* BannerDelegate.swift */; };
+		24EFBF80228D7F2A006ABE06 /* BannerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24EFBF7C228D7F2A006ABE06 /* BannerViewCell.swift */; };
+		26FA2F42A9A3939F7B741F01888D02B3 /* Pods-HTGKBannerKit_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB9F6F726CA5E34EF5C44FB1009E592 /* Pods-HTGKBannerKit_Tests-dummy.m */; };
+		596D1583806066EC6E363EEF7049450B /* Pods-HTGKBannerKit_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CD1C5E17989E644EDC3EC8C4AC31957B /* Pods-HTGKBannerKit_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		636DE91C0C1B6C61C8FF3B6227CD4692 /* Pods-HTGKBannerKit_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A04D7EEE0E1807D9721A5A564F196F /* Pods-HTGKBannerKit_Example-dummy.m */; };
+		72C73A8424524CA21249D254364714FF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
+		91DED894185EF702ED6DB03CBBB02C27 /* HTGKBannerKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9A95B67B4447E672F78DCC3FE8C40E /* HTGKBannerKit-dummy.m */; };
+		E863F9FF5A162311599C14ECFF7BAEAA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0B5A04268DDDBFDA6F2E85230493EA10 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9048CB4F7A5BDEEA9E8F0225BF7CC59B;
+			remoteInfo = "Pods-HTGKBannerKit_Example";
+		};
+		2EF92AFD52AEC3FF28F562F0E6F2465F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 77F5874300831EDD0A2A4AD335F66820;
+			remoteInfo = HTGKBannerKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		07A04D7EEE0E1807D9721A5A564F196F /* Pods-HTGKBannerKit_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HTGKBannerKit_Example-dummy.m"; sourceTree = "<group>"; };
+		091A1F8260DFEF2A20A6AFCA81EF14CB /* HTGKBannerKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HTGKBannerKit-umbrella.h"; sourceTree = "<group>"; };
+		0AC503AA018AEECEF5D15BEAF11CD4D6 /* Pods-HTGKBannerKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HTGKBannerKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		0EFACFDDE0F48A0DAF007000AD46D03D /* Pods-HTGKBannerKit_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HTGKBannerKit_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		1514A16D0E5027D094A725BF78FCA90A /* Pods-HTGKBannerKit_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HTGKBannerKit_Example-umbrella.h"; sourceTree = "<group>"; };
+		24EFBF79228D7F2A006ABE06 /* BannerPageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BannerPageControl.swift; path = HTGKBannerKit/Classes/BannerPageControl.swift; sourceTree = "<group>"; };
+		24EFBF7A228D7F2A006ABE06 /* BannerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BannerView.swift; path = HTGKBannerKit/Classes/BannerView.swift; sourceTree = "<group>"; };
+		24EFBF7B228D7F2A006ABE06 /* BannerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BannerDelegate.swift; path = HTGKBannerKit/Classes/BannerDelegate.swift; sourceTree = "<group>"; };
+		24EFBF7C228D7F2A006ABE06 /* BannerViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BannerViewCell.swift; path = HTGKBannerKit/Classes/BannerViewCell.swift; sourceTree = "<group>"; };
+		3E358E34998ECCFC92A8F8105E6E0FDE /* HTGKBannerKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HTGKBannerKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5042C314CD56B148E425367828D2F230 /* Pods-HTGKBannerKit_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-HTGKBannerKit_Tests.modulemap"; sourceTree = "<group>"; };
+		585E69A5CF955C025DED805312839BF4 /* Pods-HTGKBannerKit_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HTGKBannerKit_Example-frameworks.sh"; sourceTree = "<group>"; };
+		68DFEFF598DE76F0D742FA0EAC6ADBB9 /* Pods-HTGKBannerKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HTGKBannerKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		730A5AA7E68053D17924B861562F1B93 /* Pods-HTGKBannerKit_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HTGKBannerKit_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		74DAF6BEBA55C37F2FD09EB4C1222145 /* HTGKBannerKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HTGKBannerKit-prefix.pch"; sourceTree = "<group>"; };
+		76FB4E4913FA38967700B9FF9E2085AA /* HTGKBannerKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = HTGKBannerKit.modulemap; sourceTree = "<group>"; };
+		80043141E6C683A3004A72D07CA0FB17 /* Pods_HTGKBannerKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HTGKBannerKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		81996271CEDE95814418AB16799E20E7 /* HTGKBannerKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HTGKBannerKit.xcconfig; sourceTree = "<group>"; };
+		8394E01A3A167381C65A6A83DD7BFF0D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		95A83F04D1F73AFC6A144A8D851C0E34 /* Pods-HTGKBannerKit_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HTGKBannerKit_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		97826AF73904821872B7488725A55BA2 /* Pods-HTGKBannerKit_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HTGKBannerKit_Example-Info.plist"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A22961365DEB6D498F91A2E2B4698866 /* Pods-HTGKBannerKit_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-HTGKBannerKit_Example.modulemap"; sourceTree = "<group>"; };
+		AF33CB92177CEA35BBA754E63E484CDC /* HTGKBannerKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = HTGKBannerKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		CD1C5E17989E644EDC3EC8C4AC31957B /* Pods-HTGKBannerKit_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HTGKBannerKit_Tests-umbrella.h"; sourceTree = "<group>"; };
+		D2036394D7AC0489AD4CE8B3F3553A90 /* Pods_HTGKBannerKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HTGKBannerKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D44672466868CA422F66C56611ED932E /* Pods-HTGKBannerKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HTGKBannerKit_Example.release.xcconfig"; sourceTree = "<group>"; };
+		DC294D349FD76009833C5D98D54D351D /* Pods-HTGKBannerKit_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HTGKBannerKit_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		E141335CF392A00D79FF2E7124CAAB4D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		E858295D2FB6148B949DA70FBBAFF404 /* Pods-HTGKBannerKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HTGKBannerKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		E8FAC1EE62994EB10CEF6C016C5DBE59 /* Pods-HTGKBannerKit_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HTGKBannerKit_Tests-Info.plist"; sourceTree = "<group>"; };
+		EAB9F6F726CA5E34EF5C44FB1009E592 /* Pods-HTGKBannerKit_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HTGKBannerKit_Tests-dummy.m"; sourceTree = "<group>"; };
+		EE9A95B67B4447E672F78DCC3FE8C40E /* HTGKBannerKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HTGKBannerKit-dummy.m"; sourceTree = "<group>"; };
+		FA7348638A0F5E484D0440735B6A8803 /* HTGKBannerKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "HTGKBannerKit-Info.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AC288FCBC097CE3D4A1810BCF5AFB207 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E863F9FF5A162311599C14ECFF7BAEAA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB7488BB40E4E3D16E99845A2B29A00C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72C73A8424524CA21249D254364714FF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDEB2E4BB6E59198557930A5F6372CFC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00AF4D0BA5507132A882C12187DB6291 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		41952C9D0E9BDD79645C3596E3435AE2 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				AF33CB92177CEA35BBA754E63E484CDC /* HTGKBannerKit.podspec */,
+				E141335CF392A00D79FF2E7124CAAB4D /* LICENSE */,
+				8394E01A3A167381C65A6A83DD7BFF0D /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		430114177FAE7C74ED7578A84071CD1A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3E358E34998ECCFC92A8F8105E6E0FDE /* HTGKBannerKit.framework */,
+				D2036394D7AC0489AD4CE8B3F3553A90 /* Pods_HTGKBannerKit_Example.framework */,
+				80043141E6C683A3004A72D07CA0FB17 /* Pods_HTGKBannerKit_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		63934AE98C5208FAA461563235BF2E15 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8ED12EA3E8B3B8A48E141B79C6DAA06E /* Pods-HTGKBannerKit_Example */,
+				E363391B0F91C3990C8E597BBA9B90E1 /* Pods-HTGKBannerKit_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		69A2255A50D83D54189AD508B94878AD /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				76FB4E4913FA38967700B9FF9E2085AA /* HTGKBannerKit.modulemap */,
+				81996271CEDE95814418AB16799E20E7 /* HTGKBannerKit.xcconfig */,
+				EE9A95B67B4447E672F78DCC3FE8C40E /* HTGKBannerKit-dummy.m */,
+				FA7348638A0F5E484D0440735B6A8803 /* HTGKBannerKit-Info.plist */,
+				74DAF6BEBA55C37F2FD09EB4C1222145 /* HTGKBannerKit-prefix.pch */,
+				091A1F8260DFEF2A20A6AFCA81EF14CB /* HTGKBannerKit-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/HTGKBannerKit";
+			sourceTree = "<group>";
+		};
+		71C733249D11A09C5F2D1C6945B5FF98 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D05C21727D920455F502CD554A95D5BB /* HTGKBannerKit */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		8ED12EA3E8B3B8A48E141B79C6DAA06E /* Pods-HTGKBannerKit_Example */ = {
+			isa = PBXGroup;
+			children = (
+				A22961365DEB6D498F91A2E2B4698866 /* Pods-HTGKBannerKit_Example.modulemap */,
+				0EFACFDDE0F48A0DAF007000AD46D03D /* Pods-HTGKBannerKit_Example-acknowledgements.markdown */,
+				730A5AA7E68053D17924B861562F1B93 /* Pods-HTGKBannerKit_Example-acknowledgements.plist */,
+				07A04D7EEE0E1807D9721A5A564F196F /* Pods-HTGKBannerKit_Example-dummy.m */,
+				585E69A5CF955C025DED805312839BF4 /* Pods-HTGKBannerKit_Example-frameworks.sh */,
+				97826AF73904821872B7488725A55BA2 /* Pods-HTGKBannerKit_Example-Info.plist */,
+				1514A16D0E5027D094A725BF78FCA90A /* Pods-HTGKBannerKit_Example-umbrella.h */,
+				E858295D2FB6148B949DA70FBBAFF404 /* Pods-HTGKBannerKit_Example.debug.xcconfig */,
+				D44672466868CA422F66C56611ED932E /* Pods-HTGKBannerKit_Example.release.xcconfig */,
+			);
+			name = "Pods-HTGKBannerKit_Example";
+			path = "Target Support Files/Pods-HTGKBannerKit_Example";
+			sourceTree = "<group>";
+		};
+		9B055D0CFEA43187E72B03DED11F5662 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				71C733249D11A09C5F2D1C6945B5FF98 /* Development Pods */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				430114177FAE7C74ED7578A84071CD1A /* Products */,
+				63934AE98C5208FAA461563235BF2E15 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D05C21727D920455F502CD554A95D5BB /* HTGKBannerKit */ = {
+			isa = PBXGroup;
+			children = (
+				24EFBF7B228D7F2A006ABE06 /* BannerDelegate.swift */,
+				24EFBF79228D7F2A006ABE06 /* BannerPageControl.swift */,
+				24EFBF7A228D7F2A006ABE06 /* BannerView.swift */,
+				24EFBF7C228D7F2A006ABE06 /* BannerViewCell.swift */,
+				41952C9D0E9BDD79645C3596E3435AE2 /* Pod */,
+				69A2255A50D83D54189AD508B94878AD /* Support Files */,
+			);
+			name = HTGKBannerKit;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9B055D0CFEA43187E72B03DED11F5662 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E363391B0F91C3990C8E597BBA9B90E1 /* Pods-HTGKBannerKit_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				5042C314CD56B148E425367828D2F230 /* Pods-HTGKBannerKit_Tests.modulemap */,
+				DC294D349FD76009833C5D98D54D351D /* Pods-HTGKBannerKit_Tests-acknowledgements.markdown */,
+				95A83F04D1F73AFC6A144A8D851C0E34 /* Pods-HTGKBannerKit_Tests-acknowledgements.plist */,
+				EAB9F6F726CA5E34EF5C44FB1009E592 /* Pods-HTGKBannerKit_Tests-dummy.m */,
+				E8FAC1EE62994EB10CEF6C016C5DBE59 /* Pods-HTGKBannerKit_Tests-Info.plist */,
+				CD1C5E17989E644EDC3EC8C4AC31957B /* Pods-HTGKBannerKit_Tests-umbrella.h */,
+				0AC503AA018AEECEF5D15BEAF11CD4D6 /* Pods-HTGKBannerKit_Tests.debug.xcconfig */,
+				68DFEFF598DE76F0D742FA0EAC6ADBB9 /* Pods-HTGKBannerKit_Tests.release.xcconfig */,
+			);
+			name = "Pods-HTGKBannerKit_Tests";
+			path = "Target Support Files/Pods-HTGKBannerKit_Tests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0204044DB7AE6449322840EDA1FC2EBC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				596D1583806066EC6E363EEF7049450B /* Pods-HTGKBannerKit_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1C6DE6AFA8584B0FA89D95B666A9CBA1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1696BF68DB8CF164F5A75DD2F11ABC70 /* HTGKBannerKit-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE46E80E46E20592CB220A557E5FF717 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FBA93B3604C25CBF6054479C18B64D5 /* Pods-HTGKBannerKit_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0B62554438F1663777A16DD139CDB7E3 /* Pods-HTGKBannerKit_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96BF86014681B164D6B30C5BC76A3108 /* Build configuration list for PBXNativeTarget "Pods-HTGKBannerKit_Tests" */;
+			buildPhases = (
+				0204044DB7AE6449322840EDA1FC2EBC /* Headers */,
+				551F052FC4C6D3CDC6F8581ECAC33521 /* Sources */,
+				AC288FCBC097CE3D4A1810BCF5AFB207 /* Frameworks */,
+				CC33399B07B01CCD9A34958FA57A0F20 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FF7CE0E0EB687E9604BE905C5EE123B8 /* PBXTargetDependency */,
+			);
+			name = "Pods-HTGKBannerKit_Tests";
+			productName = "Pods-HTGKBannerKit_Tests";
+			productReference = 80043141E6C683A3004A72D07CA0FB17 /* Pods_HTGKBannerKit_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		77F5874300831EDD0A2A4AD335F66820 /* HTGKBannerKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5185937C789DB6D42BA962F5CED435F /* Build configuration list for PBXNativeTarget "HTGKBannerKit" */;
+			buildPhases = (
+				1C6DE6AFA8584B0FA89D95B666A9CBA1 /* Headers */,
+				43DA06FF51189E7715DA116759D9DF9F /* Sources */,
+				EDEB2E4BB6E59198557930A5F6372CFC /* Frameworks */,
+				DBDFCFAEE852DD37C8E5910659A10C4C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HTGKBannerKit;
+			productName = HTGKBannerKit;
+			productReference = 3E358E34998ECCFC92A8F8105E6E0FDE /* HTGKBannerKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9048CB4F7A5BDEEA9E8F0225BF7CC59B /* Pods-HTGKBannerKit_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D6D28C853F55A861B9FB7CA1D0D3CAC /* Build configuration list for PBXNativeTarget "Pods-HTGKBannerKit_Example" */;
+			buildPhases = (
+				DE46E80E46E20592CB220A557E5FF717 /* Headers */,
+				5E65CCD98A2E2855F2F37DCBA354840B /* Sources */,
+				BB7488BB40E4E3D16E99845A2B29A00C /* Frameworks */,
+				3BBB1DE62FCC74909537FD81B3707187 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ED71D0717616F26ED9418F40159CABD8 /* PBXTargetDependency */,
+			);
+			name = "Pods-HTGKBannerKit_Example";
+			productName = "Pods-HTGKBannerKit_Example";
+			productReference = D2036394D7AC0489AD4CE8B3F3553A90 /* Pods_HTGKBannerKit_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				TargetAttributes = {
+					77F5874300831EDD0A2A4AD335F66820 = {
+						LastSwiftMigration = 1020;
+					};
+				};
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 430114177FAE7C74ED7578A84071CD1A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				77F5874300831EDD0A2A4AD335F66820 /* HTGKBannerKit */,
+				9048CB4F7A5BDEEA9E8F0225BF7CC59B /* Pods-HTGKBannerKit_Example */,
+				0B62554438F1663777A16DD139CDB7E3 /* Pods-HTGKBannerKit_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3BBB1DE62FCC74909537FD81B3707187 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC33399B07B01CCD9A34958FA57A0F20 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBDFCFAEE852DD37C8E5910659A10C4C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		43DA06FF51189E7715DA116759D9DF9F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24EFBF7F228D7F2A006ABE06 /* BannerDelegate.swift in Sources */,
+				24EFBF7D228D7F2A006ABE06 /* BannerPageControl.swift in Sources */,
+				24EFBF80228D7F2A006ABE06 /* BannerViewCell.swift in Sources */,
+				91DED894185EF702ED6DB03CBBB02C27 /* HTGKBannerKit-dummy.m in Sources */,
+				24EFBF7E228D7F2A006ABE06 /* BannerView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		551F052FC4C6D3CDC6F8581ECAC33521 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26FA2F42A9A3939F7B741F01888D02B3 /* Pods-HTGKBannerKit_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5E65CCD98A2E2855F2F37DCBA354840B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				636DE91C0C1B6C61C8FF3B6227CD4692 /* Pods-HTGKBannerKit_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ED71D0717616F26ED9418F40159CABD8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = HTGKBannerKit;
+			target = 77F5874300831EDD0A2A4AD335F66820 /* HTGKBannerKit */;
+			targetProxy = 2EF92AFD52AEC3FF28F562F0E6F2465F /* PBXContainerItemProxy */;
+		};
+		FF7CE0E0EB687E9604BE905C5EE123B8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-HTGKBannerKit_Example";
+			target = 9048CB4F7A5BDEEA9E8F0225BF7CC59B /* Pods-HTGKBannerKit_Example */;
+			targetProxy = 0B5A04268DDDBFDA6F2E85230493EA10 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		258B0158563848C03403BA8B6489D9E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0AC503AA018AEECEF5D15BEAF11CD4D6 /* Pods-HTGKBannerKit_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-HTGKBannerKit_Tests/Pods-HTGKBannerKit_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-HTGKBannerKit_Tests/Pods-HTGKBannerKit_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5D77A5B46C5496064BA4F32D4C2E2914 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E858295D2FB6148B949DA70FBBAFF404 /* Pods-HTGKBannerKit_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-HTGKBannerKit_Example/Pods-HTGKBannerKit_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-HTGKBannerKit_Example/Pods-HTGKBannerKit_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		643A4F37825E1F7FF1C006A68795D3D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D44672466868CA422F66C56611ED932E /* Pods-HTGKBannerKit_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-HTGKBannerKit_Example/Pods-HTGKBannerKit_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-HTGKBannerKit_Example/Pods-HTGKBannerKit_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		67E19772EB5ADEE728839D1CE19EBD28 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68DFEFF598DE76F0D742FA0EAC6ADBB9 /* Pods-HTGKBannerKit_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-HTGKBannerKit_Tests/Pods-HTGKBannerKit_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-HTGKBannerKit_Tests/Pods-HTGKBannerKit_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		AB4D69770D8ACE3A05E80BB3502666F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		B4CBFD3540216C0A084EADA73A953115 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81996271CEDE95814418AB16799E20E7 /* HTGKBannerKit.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/HTGKBannerKit/HTGKBannerKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HTGKBannerKit/HTGKBannerKit-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/HTGKBannerKit/HTGKBannerKit.modulemap";
+				PRODUCT_MODULE_NAME = HTGKBannerKit;
+				PRODUCT_NAME = HTGKBannerKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		BA91125F929626387E7D63E80E57D722 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81996271CEDE95814418AB16799E20E7 /* HTGKBannerKit.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/HTGKBannerKit/HTGKBannerKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HTGKBannerKit/HTGKBannerKit-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/HTGKBannerKit/HTGKBannerKit.modulemap";
+				PRODUCT_MODULE_NAME = HTGKBannerKit;
+				PRODUCT_NAME = HTGKBannerKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F232B5ECA11A71BFA199A229B323F454 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB4D69770D8ACE3A05E80BB3502666F6 /* Debug */,
+				F232B5ECA11A71BFA199A229B323F454 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7D6D28C853F55A861B9FB7CA1D0D3CAC /* Build configuration list for PBXNativeTarget "Pods-HTGKBannerKit_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D77A5B46C5496064BA4F32D4C2E2914 /* Debug */,
+				643A4F37825E1F7FF1C006A68795D3D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		96BF86014681B164D6B30C5BC76A3108 /* Build configuration list for PBXNativeTarget "Pods-HTGKBannerKit_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				258B0158563848C03403BA8B6489D9E0 /* Debug */,
+				67E19772EB5ADEE728839D1CE19EBD28 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5185937C789DB6D42BA962F5CED435F /* Build configuration list for PBXNativeTarget "HTGKBannerKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA91125F929626387E7D63E80E57D722 /* Debug */,
+				B4CBFD3540216C0A084EADA73A953115 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

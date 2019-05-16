@@ -1,0 +1,6 @@
+framework module Pods_HTGKBannerKit_Example {
+  umbrella header "Pods-HTGKBannerKit_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
