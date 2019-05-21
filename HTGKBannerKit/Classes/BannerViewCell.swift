@@ -7,7 +7,7 @@
 //
 
 import UIKit
-//import Kingfisher
+import Kingfisher
 
 class BannerViewCell: UICollectionViewCell {
     
@@ -23,7 +23,7 @@ class BannerViewCell: UICollectionViewCell {
     func setImage(imageUrl: String){
         if imageUrl.hasPrefix("http") {
             
-//            self.imageView.kf.setImage(with: URL(string: imageUrl), placeholder: nil)
+            self.imageView.kf.setImage(with: URL(string: imageUrl), placeholder: nil)
         } else {
             self.imageView.image = UIImage(named: imageUrl)
         }

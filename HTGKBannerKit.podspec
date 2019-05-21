@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'HTGKBannerKit'
-    s.version          = '0.3.0'
+    s.version          = '0.4.0'
     s.summary          = '简单的图片轮播图框架'
     
     # This description is used to generate tags and improve search results.
@@ -41,5 +41,6 @@ Pod::Spec.new do |s|
     # s.public_header_files = 'Pod/Classes/**/*.h'
     # s.frameworks = 'UIKit', 'MapKit'
     # s.dependency 'AFNetworking', '~> 2.3'
+    s.dependency 'Kingfisher', '~> 4.10.0'
     
 end

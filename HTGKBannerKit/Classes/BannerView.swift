@@ -21,7 +21,7 @@ public class BannerView: UIView {
         }
     }
     
-    let timeInterval: TimeInterval = 1
+    let timeInterval: TimeInterval = 3
     
     // 代理
     public weak var delegate: BannerDelegate?

@@ -271,12 +271,14 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-HTGKBannerKit_Example/Pods-HTGKBannerKit_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/HTGKBannerKit/HTGKBannerKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HTGKBannerKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
