@@ -10,7 +10,21 @@ import UIKit
 
 import HTGKBannerKit
 
-class ViewController: UIViewController, BannerDelegate {
+class ViewController: UIViewController, BannerDelegate, BannerDataSource {
+    
+    func bannerViewCellIdentifier() -> String {
+        return "BannerViewCell"
+    }
+    
+    func bannerViewCellClassForBannerView() -> AnyClass {
+        return BannerViewCell.self
+    }
+    
+    func bannerViewCell(_ cell: UICollectionViewCell, for index: NSInteger, bannerView: BannerView) {
+        let customCell = cell as! BannerViewCell
+        customCell.setImage(imageUrl: ["ad2","Rectangle Copy","ad2","Rectangle Copy"][index])
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +34,7 @@ class ViewController: UIViewController, BannerDelegate {
         let bannerView = BannerView.init(frame: CGRect.init(x: 0, y: 100, width: self.view.frame.size.width, height: 150))
         bannerView.imageNames = ["ad2","Rectangle Copy","ad2","Rectangle Copy"]
         bannerView.delegate = self
+        bannerView.dataSource = self
         self.view.addSubview(bannerView)
         
     }
@@ -28,5 +43,14 @@ class ViewController: UIViewController, BannerDelegate {
         print(index)
     }
     
+    func numberOfRows(_ bannerView: BannerView) -> Int {
+        return 4
+    }
+    
+    func bannerView(_ bannerView: BannerView, cellForRowAt index: Int) -> UICollectionViewCell {
+        return UICollectionViewCell()
+    }
+    
+
 }
 

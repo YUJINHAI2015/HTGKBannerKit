@@ -13,3 +13,15 @@ import UIKit
     /// 点击图片
     @objc optional func bannerView(_ bannerView: BannerView, didSelectItemAt index: Int)
 }
+
+@objc public protocol BannerDataSource: NSObjectProtocol {
+    
+    func numberOfRows(_ bannerView: BannerView) -> Int
+    func bannerView(_ bannerView: BannerView, cellForRowAt index: Int) -> UICollectionViewCell
+
+    func bannerViewCellIdentifier() -> String
+    @objc optional func bannerViewCellClassForBannerView() -> AnyClass
+    @objc optional func bannerViewCellNibForBannerView() -> UINib
+    @objc optional func bannerViewCell(_ cell: UICollectionViewCell, for index: NSInteger, bannerView: BannerView)
+
+}

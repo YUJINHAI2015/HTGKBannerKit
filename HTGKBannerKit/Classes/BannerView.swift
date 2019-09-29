@@ -8,8 +8,6 @@
 
 import UIKit
 
-let cellIdentifier = "BannerViewCell"
-
 public class BannerView: UIView {
 
     private let pageControlHeight: CGFloat = 20
@@ -24,7 +22,26 @@ public class BannerView: UIView {
     let timeInterval: TimeInterval = 3
     
     // 代理
-    public weak var delegate: BannerDelegate?
+    public weak var delegate: BannerDelegate? {
+        didSet {
+            
+        }
+    }
+    public weak var dataSource: BannerDataSource? {
+        didSet {
+            if let reuseIdentifier = dataSource?.bannerViewCellIdentifier() {
+                self.reuseIdentifier = reuseIdentifier
+            }
+            if let customClass = dataSource?.bannerViewCellClassForBannerView?() {
+                collectionView.register(customClass, forCellWithReuseIdentifier: reuseIdentifier)
+            } else if let customNib = dataSource?.bannerViewCellNibForBannerView?() {
+                collectionView.register(customNib, forCellWithReuseIdentifier: reuseIdentifier)
+            }
+        }
+    }
+    
+    private var reuseIdentifier: String = "BannerViewCell"
+
     // collectionView
     private lazy var collectionView: UICollectionView! = {
         let collectionView = UICollectionView.init(frame: bounds,
@@ -35,7 +52,6 @@ public class BannerView: UIView {
         collectionView.isPagingEnabled = true
         collectionView.dataSource = self
         collectionView.delegate = self
-        collectionView.register(BannerViewCell.self, forCellWithReuseIdentifier: cellIdentifier)
         return collectionView
     }()
     
@@ -94,13 +110,15 @@ public class BannerView: UIView {
 
 extension BannerView: UICollectionViewDelegate, UICollectionViewDataSource {
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.imageNames!.count
+        return self.dataSource?.numberOfRows(self) ?? 0
     }
     
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell: BannerViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! BannerViewCell
-        cell.setImage(imageUrl: self.imageNames![indexPath.row])
-        cell.backgroundColor = .white
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+        
+        if let _ = self.dataSource?.responds(to: #selector(self.dataSource?.bannerViewCell(_:for:bannerView:))) {
+            self.dataSource?.bannerViewCell?(cell, for: indexPath.row, bannerView: self)
+        }
         return cell
     }
     
