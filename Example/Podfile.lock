@@ -1,5 +1,5 @@
 PODS:
-  - HTGKBannerKit (0.3.0):
+  - HTGKBannerKit (0.4.0):
     - Kingfisher (~> 4.10.0)
   - Kingfisher (4.10.1)
 
@@ -15,9 +15,9 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  HTGKBannerKit: a35816384a2c19f110f50b0dc331643925a3411a
+  HTGKBannerKit: bc961f43ab1ea2e0f7c2d354baf1eb8d7f75fdda
   Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
 
 PODFILE CHECKSUM: 98901891f4d6624900422234dba07094f352f2bb
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.7.3

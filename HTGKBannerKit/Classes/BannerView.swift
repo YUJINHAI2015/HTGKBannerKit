@@ -55,6 +55,12 @@ public class BannerView: UIView {
         page.isUserInteractionEnabled = false
         page.pageIndicatorTintColor = .gray
         page.currentPageIndicatorTintColor = .red
+        page.controlSpacing = 4
+        page.controlSize = CGSize(width: 5, height: 5)
+        page.currentControlSize = CGSize(width: 30, height: 5)
+        page.pageIndicatorTintColor = UIColor.white.withAlphaComponent(0.4)
+        page.currentPageIndicatorTintColor = UIColor.white
+
         return page
     }()
 

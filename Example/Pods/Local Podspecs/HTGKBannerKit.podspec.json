@@ -1,6 +1,6 @@
 {
   "name": "HTGKBannerKit",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "summary": "简单的图片轮播图框架",
   "description": "这是一个简单的轮播图，现阶段还不完善，后续继续优化。",
   "homepage": "https://github.com/YUJINHAI2015/HTGKBannerKit",
@@ -13,16 +13,17 @@
   },
   "source": {
     "git": "https://github.com/YUJINHAI2015/HTGKBannerKit.git",
-    "tag": "0.3.0"
+    "tag": "0.4.0"
   },
   "platforms": {
     "ios": "9.0"
   },
   "source_files": "HTGKBannerKit/Classes/**/*",
-  "swift_version": "5.0",
+  "swift_versions": "5.0",
   "dependencies": {
     "Kingfisher": [
       "~> 4.10.0"
     ]
-  }
+  },
+  "swift_version": "5.0"
 }
