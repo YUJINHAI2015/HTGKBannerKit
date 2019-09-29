@@ -12,13 +12,6 @@ public class BannerView: UIView {
 
     private let pageControlHeight: CGFloat = 20
     
-    public var imageNames: [String]? {
-        didSet {
-            timer.fireDate = Date(timeIntervalSinceNow: timeInterval)
-            pageControl.numberOfPages = imageNames!.count
-        }
-    }
-    
     let timeInterval: TimeInterval = 3
     
     // 代理
@@ -41,7 +34,13 @@ public class BannerView: UIView {
     }
     
     private var reuseIdentifier: String = "BannerViewCell"
-
+    
+    private var itemCount: NSInteger = 0{
+        didSet {
+            pageControl.numberOfPages = itemCount
+        }
+    }
+    
     // collectionView
     private lazy var collectionView: UICollectionView! = {
         let collectionView = UICollectionView.init(frame: bounds,
@@ -101,7 +100,15 @@ public class BannerView: UIView {
         super.removeFromSuperview()
         self.timer.invalidate()
     }
-    
+    override public func willMove(toWindow newWindow: UIWindow?) {
+        super.willMove(toWindow: newWindow)
+        if newWindow != nil {
+            timer.fireDate = Date(timeIntervalSinceNow: timeInterval)
+        } else {
+            timer.fireDate = Date.distantFuture
+        }
+    }
+
     deinit {
         print("ICycleView deinit success")
     }
@@ -110,7 +117,9 @@ public class BannerView: UIView {
 
 extension BannerView: UICollectionViewDelegate, UICollectionViewDataSource {
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.dataSource?.numberOfRows(self) ?? 0
+        let count = self.dataSource?.numberOfRows(self) ?? 0
+        self.itemCount = count
+        return count
     }
     
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -136,7 +145,7 @@ extension BannerView {
             // 下一个item
             var nextPath = IndexPath(item: indexPath.item + 1, section: indexPath.section)
             
-            if nextPath.item < imageNames!.count {
+            if nextPath.item < self.itemCount {
                 collectionView.scrollToItem(at: nextPath, at: .centeredHorizontally, animated: true)
             }else {
                 collectionView.setContentOffset(CGPoint.init(x: 0, y: 0), animated: false)
@@ -158,7 +167,7 @@ extension BannerView {
         
         let offsetX = scrollView.contentOffset.x
         var page = Int(offsetX / bounds.size.width+0.5)
-        page = page % imageNames!.count
+        page = page % self.itemCount
         if pageControl.currentPage != page {
             pageControl.currentPage = page
         }

@@ -32,7 +32,6 @@ class ViewController: UIViewController, BannerDelegate, BannerDataSource {
     }
     func initUI() {
         let bannerView = BannerView.init(frame: CGRect.init(x: 0, y: 100, width: self.view.frame.size.width, height: 150))
-        bannerView.imageNames = ["ad2","Rectangle Copy","ad2","Rectangle Copy"]
         bannerView.delegate = self
         bannerView.dataSource = self
         self.view.addSubview(bannerView)
