@@ -22,7 +22,7 @@ class ViewController: UIViewController, BannerDelegate, BannerDataSource {
     
     func bannerViewCell(_ cell: UICollectionViewCell, for index: NSInteger, bannerView: BannerView) {
         let customCell = cell as! BannerViewCell
-        customCell.setImage(imageUrl: ["ad2","Rectangle Copy","ad2","Rectangle Copy"][index])
+        customCell.setImage(imageUrl: ["ad2","Rectangle Copy","Member card_l1_baiyu","Member card_l2_huangyu"][index])
         
     }
     
