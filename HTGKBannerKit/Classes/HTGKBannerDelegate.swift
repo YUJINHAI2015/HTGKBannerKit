@@ -15,9 +15,9 @@ import UIKit
 }
 
 @objc public protocol HTGKBannerDataSource: NSObjectProtocol {
-    
+    /// 返回个数
     func numberOfRows(_ bannerView: HTGKBannerView) -> Int
-    func bannerView(_ bannerView: HTGKBannerView, cellForRowAt index: Int) -> UICollectionViewCell
+    /// 需要渲染的cell
     func bannerViewCell(_ cell: UICollectionViewCell, for index: NSInteger, bannerView: HTGKBannerView)
 
     func bannerViewCellIdentifier() -> String

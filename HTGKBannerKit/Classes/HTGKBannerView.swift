@@ -30,10 +30,10 @@ public class HTGKBannerView: UIView {
             } else if let customNib = dataSource?.bannerViewCellNibForBannerView?() {
                 collectionView.register(customNib, forCellWithReuseIdentifier: reuseIdentifier)
             }
-            
-            let count = self.dataSource?.numberOfRows(self) ?? 0
-            self.itemCount = count
         }
+    }
+    public func reloadData() {
+        self.collectionView.reloadData()
     }
     // MARK: - private
     private var reuseIdentifier: String = ""
@@ -127,6 +127,8 @@ public class HTGKBannerView: UIView {
 
 extension HTGKBannerView: UICollectionViewDelegate, UICollectionViewDataSource {
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        let count = self.dataSource?.numberOfRows(self) ?? 0
+        self.itemCount = count
         
         return self.reloadCount
     }
@@ -143,7 +145,7 @@ extension HTGKBannerView: UICollectionViewDelegate, UICollectionViewDataSource {
     
     public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let _ = self.delegate?.responds(to: #selector(self.delegate?.bannerView(_:didSelectItemAt:))) {
-            delegate?.bannerView?(self, didSelectItemAt: indexPath.row)
+            delegate?.bannerView?(self, didSelectItemAt: (indexPath.row % self.itemCount))
         }
     }
 }
