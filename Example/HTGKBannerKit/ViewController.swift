@@ -34,6 +34,9 @@ class ViewController: UIViewController, BannerDelegate, BannerDataSource {
         let bannerView = BannerView.init(frame: CGRect.init(x: 0, y: 100, width: self.view.frame.size.width, height: 150))
         bannerView.delegate = self
         bannerView.dataSource = self
+        
+        bannerView.isOpenLoop = false
+        bannerView.timeInterval = 1
         self.view.addSubview(bannerView)
         
     }

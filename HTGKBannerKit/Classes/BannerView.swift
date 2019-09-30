@@ -10,8 +10,11 @@ import UIKit
 
 public class BannerView: UIView {
 
-    
-    let timeInterval: TimeInterval = 3
+    // MARK: - public
+    /// 定时器滑动时间
+    public var timeInterval: TimeInterval = 3
+    /// 是否打开循环
+    public var isOpenLoop: Bool = true
     // 代理
     public weak var delegate: BannerDelegate? {
         didSet {
@@ -32,13 +35,13 @@ public class BannerView: UIView {
             self.itemCount = count
         }
     }
-    
+    // MARK: - private
     private var reuseIdentifier: String = ""
     private let pageControlHeight: CGFloat = 20
 
     private var itemCount: NSInteger = 0 { // 传入数据的个数
         didSet {
-            pageControl.numberOfPages = itemCount
+            self.pageControl.numberOfPages = itemCount
         }
     }
     private var reloadCount: NSInteger { // collection刷新的个数
@@ -75,14 +78,11 @@ public class BannerView: UIView {
     private lazy var pageControl: BannerPageControl = {
         let page = BannerPageControl(frame: CGRect(x: 0, y: bounds.height - pageControlHeight, width: bounds.width, height: pageControlHeight))
         page.isUserInteractionEnabled = false
-        page.pageIndicatorTintColor = .gray
-        page.currentPageIndicatorTintColor = .red
         page.controlSpacing = 4
         page.controlSize = CGSize(width: 5, height: 5)
         page.currentControlSize = CGSize(width: 30, height: 5)
         page.pageIndicatorTintColor = UIColor.white.withAlphaComponent(0.4)
         page.currentPageIndicatorTintColor = UIColor.white
-
         return page
     }()
 
@@ -109,6 +109,10 @@ public class BannerView: UIView {
     }
     override public func willMove(toWindow newWindow: UIWindow?) {
         super.willMove(toWindow: newWindow)
+        
+        guard self.isOpenLoop else {
+            return
+        }
         if newWindow != nil {
             timer.fireDate = Date(timeIntervalSinceNow: timeInterval)
         } else {
@@ -179,10 +183,16 @@ extension BannerView {
     
     // 开始拖拽时,停止定时器
     public func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        guard self.isOpenLoop else {
+            return
+        }
         timer.fireDate = Date.distantFuture
     }
     // 结束拖拽时,恢复定时器
     public func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        guard self.isOpenLoop else {
+            return
+        }
         timer.fireDate = Date(timeIntervalSinceNow: timeInterval)
     }
     // 更新pagecontroller index
@@ -191,6 +201,6 @@ extension BannerView {
         let index = self.currentIndex()
         let currentPage = self.currentPage(scrollAtIndex: index, totalCount: self.itemCount)
         
-        pageControl.currentPage = currentPage
+        self.pageControl.currentPage = currentPage
     }
 }
