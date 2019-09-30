@@ -18,10 +18,10 @@ import UIKit
     
     func numberOfRows(_ bannerView: BannerView) -> Int
     func bannerView(_ bannerView: BannerView, cellForRowAt index: Int) -> UICollectionViewCell
+    func bannerViewCell(_ cell: UICollectionViewCell, for index: NSInteger, bannerView: BannerView)
 
     func bannerViewCellIdentifier() -> String
     @objc optional func bannerViewCellClassForBannerView() -> AnyClass
     @objc optional func bannerViewCellNibForBannerView() -> UINib
-    @objc optional func bannerViewCell(_ cell: UICollectionViewCell, for index: NSInteger, bannerView: BannerView)
 
 }

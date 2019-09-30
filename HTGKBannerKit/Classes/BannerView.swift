@@ -10,14 +10,11 @@ import UIKit
 
 public class BannerView: UIView {
 
-    private let pageControlHeight: CGFloat = 20
     
     let timeInterval: TimeInterval = 3
-    
     // 代理
     public weak var delegate: BannerDelegate? {
         didSet {
-            
         }
     }
     public weak var dataSource: BannerDataSource? {
@@ -30,17 +27,25 @@ public class BannerView: UIView {
             } else if let customNib = dataSource?.bannerViewCellNibForBannerView?() {
                 collectionView.register(customNib, forCellWithReuseIdentifier: reuseIdentifier)
             }
+            
+            let count = self.dataSource?.numberOfRows(self) ?? 0
+            self.itemCount = count
         }
     }
     
-    private var reuseIdentifier: String = "BannerViewCell"
-    
-    private var itemCount: NSInteger = 0{
+    private var reuseIdentifier: String = ""
+    private let pageControlHeight: CGFloat = 20
+
+    private var itemCount: NSInteger = 0 { // 传入数据的个数
         didSet {
             pageControl.numberOfPages = itemCount
         }
     }
-    
+    private var reloadCount: NSInteger { // collection刷新的个数
+        get {
+            return self.itemCount * 20
+        }
+    }
     // collectionView
     private lazy var collectionView: UICollectionView! = {
         let collectionView = UICollectionView.init(frame: bounds,
@@ -51,6 +56,8 @@ public class BannerView: UIView {
         collectionView.isPagingEnabled = true
         collectionView.dataSource = self
         collectionView.delegate = self
+        collectionView.scrollsToTop = false;
+
         return collectionView
     }()
     
@@ -108,7 +115,6 @@ public class BannerView: UIView {
             timer.fireDate = Date.distantFuture
         }
     }
-
     deinit {
         print("ICycleView deinit success")
     }
@@ -117,60 +123,74 @@ public class BannerView: UIView {
 
 extension BannerView: UICollectionViewDelegate, UICollectionViewDataSource {
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        let count = self.dataSource?.numberOfRows(self) ?? 0
-        self.itemCount = count
-        return count
+        
+        return self.reloadCount
     }
     
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
         
         if let _ = self.dataSource?.responds(to: #selector(self.dataSource?.bannerViewCell(_:for:bannerView:))) {
-            self.dataSource?.bannerViewCell?(cell, for: indexPath.row, bannerView: self)
+
+            self.dataSource?.bannerViewCell(cell, for: (indexPath.row % self.itemCount), bannerView: self)
         }
         return cell
     }
     
     public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        delegate?.bannerView?(self, didSelectItemAt: indexPath.row)
+        if let _ = self.delegate?.responds(to: #selector(self.delegate?.bannerView(_:didSelectItemAt:))) {
+            delegate?.bannerView?(self, didSelectItemAt: indexPath.row)
+        }
     }
 }
-// MARK: - 定时器相关
+// MARK:- 下标相关
 extension BannerView {
+    // 当前滑动到第几个index
+    func currentIndex() -> Int {
+
+        let index = Int((self.collectionView.contentOffset.x + self.collectionFlowLayout.itemSize.width * 0.5) / self.collectionFlowLayout.itemSize.width)
+        
+        return max(0, index)
+    }
+    // 当前page的位置
+    func currentPage(scrollAtIndex: Int, totalCount: Int) -> Int {
+        return scrollAtIndex % totalCount
+    }
     
     // 定时器方法，更新Cell位置
     @objc private func updateCollectionViewAutoScrolling() {
         
+        let index = self.currentIndex()
+        
         if let indexPath = collectionView.indexPathsForVisibleItems.last {
             // 下一个item
-            var nextPath = IndexPath(item: indexPath.item + 1, section: indexPath.section)
-            
-            if nextPath.item < self.itemCount {
+            let nextPath = IndexPath(item: index + 1, section: indexPath.section)
+            // 是否滑到最后一个
+            if nextPath.item < self.reloadCount {
                 collectionView.scrollToItem(at: nextPath, at: .centeredHorizontally, animated: true)
             }else {
                 collectionView.setContentOffset(CGPoint.init(x: 0, y: 0), animated: false)
             }
         }
     }
+}
+// MARK: - 定时器相关
+extension BannerView {
     
     // 开始拖拽时,停止定时器
     public func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         timer.fireDate = Date.distantFuture
     }
-    
     // 结束拖拽时,恢复定时器
     public func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         timer.fireDate = Date(timeIntervalSinceNow: timeInterval)
     }
-    // update pageController
-    open func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    // 更新pagecontroller index
+    public func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
-        let offsetX = scrollView.contentOffset.x
-        var page = Int(offsetX / bounds.size.width+0.5)
-        page = page % self.itemCount
-        if pageControl.currentPage != page {
-            pageControl.currentPage = page
-        }
+        let index = self.currentIndex()
+        let currentPage = self.currentPage(scrollAtIndex: index, totalCount: self.itemCount)
+        
+        pageControl.currentPage = currentPage
     }
-
 }
