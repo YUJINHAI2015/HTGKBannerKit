@@ -16,7 +16,7 @@
 		34A52737CBF4CDE987CF5AF98F24AB0D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41CFDEBC9FE25D92170C5C0178F476BE /* Foundation.framework */; };
 		407795CE99CD51267CD05D5B85584A92 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994A5CE6D2BB049C40DDCFB750F826D6 /* Image.swift */; };
 		47B7CBB676621AA1E236FE3357AC6E33 /* UIButton+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C026A632FA8C03A8D9E1745DED99D5 /* UIButton+Kingfisher.swift */; };
-		47FB8A58D6E175620D052661B1411319 /* BannerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7D43AE9A61663571C67BD231BD8E57 /* BannerDelegate.swift */; };
+		47FB8A58D6E175620D052661B1411319 /* HTGKBannerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7D43AE9A61663571C67BD231BD8E57 /* HTGKBannerDelegate.swift */; };
 		4D0A52A62AE9FB015E56435DE4DDE9B3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41CFDEBC9FE25D92170C5C0178F476BE /* Foundation.framework */; };
 		4D551EF7E52A9EB925F0C604BF78AD8F /* Pods-HTGKBannerKit_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FF902344D46F1C748BB1661891A95424 /* Pods-HTGKBannerKit_Tests-dummy.m */; };
 		4D5E90D4045BBC0CDDC369D3B3621073 /* FormatIndicatedCacheSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E174CB64D7183B5D874594DB6E6A98C0 /* FormatIndicatedCacheSerializer.swift */; };
@@ -25,11 +25,11 @@
 		681FB6863C06950286A5E18DCA9ECBDC /* ImageView+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA1A6802301A708C1021D3C9445CBB9 /* ImageView+Kingfisher.swift */; };
 		712410B1CB189C3B509FD0B925BE6EF0 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D789F7AFBA1B9B4BE357992787E07FC1 /* Kingfisher.framework */; };
 		737E7BE4684F3F3157CF24011460D2C4 /* ImageTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87E9330AD273AA9DD9A88C213AEED26 /* ImageTransition.swift */; };
-		754FB9D8BF766F25436CEF8C140FA3C3 /* BannerPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77377D9739936CF0D367A4796DE3383 /* BannerPageControl.swift */; };
+		754FB9D8BF766F25436CEF8C140FA3C3 /* HTGKBannerPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77377D9739936CF0D367A4796DE3383 /* HTGKBannerPageControl.swift */; };
 		84B8017E43B8DDF1EEB91C13586BE3F7 /* Kingfisher-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E404D3BB5F3890CEA05F04C08C2B9C /* Kingfisher-dummy.m */; };
 		887E20483B9EEC545A9740A9379DB0FC /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254FA7730CB1CAB0BDA36D69A7D5C344 /* Resource.swift */; };
 		8B00B7D6097A0DD89BEEF4F4526EA4F3 /* Kingfisher-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C206DD88B0D82B5965FFE57EFEB2C10 /* Kingfisher-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9BC9C374151FF608611EC6300383CFB2 /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695E3437DE3831684CDCE88476E2C6D2 /* BannerView.swift */; };
+		9BC9C374151FF608611EC6300383CFB2 /* HTGKBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695E3437DE3831684CDCE88476E2C6D2 /* HTGKBannerView.swift */; };
 		9F1C5350FA1A2F4969AEA8B7C923E85A /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28A503D49415FB5C7C279717F3B1A3B /* Filter.swift */; };
 		A3619908871E3EE77BD2A133A753A4E3 /* AnimatedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31E71B6CA35444B162EC997C772FEF9 /* AnimatedImageView.swift */; };
 		A74D7F1CBD2DD08732006A81905822F9 /* Indicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206E82912887827D6D8F2A90B455CAD8 /* Indicator.swift */; };
@@ -107,17 +107,17 @@
 		5759803B1AA08FBC69581811F63A02E7 /* Pods_HTGKBannerKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HTGKBannerKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F64DABAD617F89AEAE0075A153915C9 /* Pods-HTGKBannerKit_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-HTGKBannerKit_Example.modulemap"; sourceTree = "<group>"; };
 		648CB5B415F4E446AFA51C225ECCBDE0 /* Kingfisher-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Kingfisher-Info.plist"; sourceTree = "<group>"; };
-		695E3437DE3831684CDCE88476E2C6D2 /* BannerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BannerView.swift; path = HTGKBannerKit/Classes/BannerView.swift; sourceTree = "<group>"; };
+		695E3437DE3831684CDCE88476E2C6D2 /* HTGKBannerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HTGKBannerView.swift; path = HTGKBannerKit/Classes/HTGKBannerView.swift; sourceTree = "<group>"; };
 		6D27D8ACB1A71D171E5EFCF8681C4142 /* Pods-HTGKBannerKit_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HTGKBannerKit_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		6D8A9E7CA9BD66C07BABD97C26C91765 /* ImageModifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageModifier.swift; path = Sources/ImageModifier.swift; sourceTree = "<group>"; };
 		7A538149964E63F84866ECE3394316FB /* HTGKBannerKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = HTGKBannerKit.modulemap; sourceTree = "<group>"; };
-		7C7D43AE9A61663571C67BD231BD8E57 /* BannerDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BannerDelegate.swift; path = HTGKBannerKit/Classes/BannerDelegate.swift; sourceTree = "<group>"; };
+		7C7D43AE9A61663571C67BD231BD8E57 /* HTGKBannerDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HTGKBannerDelegate.swift; path = HTGKBannerKit/Classes/HTGKBannerDelegate.swift; sourceTree = "<group>"; };
 		842F6230FEF5B920AFBB52CB0105347C /* HTGKBannerKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HTGKBannerKit-umbrella.h"; sourceTree = "<group>"; };
 		92E52751C1B884FAA62E6A08D0B243CE /* Kingfisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Kingfisher.swift; path = Sources/Kingfisher.swift; sourceTree = "<group>"; };
 		994A5CE6D2BB049C40DDCFB750F826D6 /* Image.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Image.swift; path = Sources/Image.swift; sourceTree = "<group>"; };
 		99B2E657375F79331AB08F81277DF977 /* Pods-HTGKBannerKit_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HTGKBannerKit_Example-umbrella.h"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A77377D9739936CF0D367A4796DE3383 /* BannerPageControl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BannerPageControl.swift; path = HTGKBannerKit/Classes/BannerPageControl.swift; sourceTree = "<group>"; };
+		A77377D9739936CF0D367A4796DE3383 /* HTGKBannerPageControl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HTGKBannerPageControl.swift; path = HTGKBannerKit/Classes/HTGKBannerPageControl.swift; sourceTree = "<group>"; };
 		A99C1F754A1555F6D6B1F080F0428071 /* HTGKBannerKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HTGKBannerKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA6DC93F263899CB037D734C835F6F20 /* ImageDownloader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageDownloader.swift; path = Sources/ImageDownloader.swift; sourceTree = "<group>"; };
 		ADC13FBF863E6DFDDDED63402B393B34 /* HTGKBannerKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "HTGKBannerKit-Info.plist"; sourceTree = "<group>"; };
@@ -251,9 +251,9 @@
 		8717C62489F1CA55E4E2D276967B516A /* HTGKBannerKit */ = {
 			isa = PBXGroup;
 			children = (
-				7C7D43AE9A61663571C67BD231BD8E57 /* BannerDelegate.swift */,
-				A77377D9739936CF0D367A4796DE3383 /* BannerPageControl.swift */,
-				695E3437DE3831684CDCE88476E2C6D2 /* BannerView.swift */,
+				7C7D43AE9A61663571C67BD231BD8E57 /* HTGKBannerDelegate.swift */,
+				A77377D9739936CF0D367A4796DE3383 /* HTGKBannerPageControl.swift */,
+				695E3437DE3831684CDCE88476E2C6D2 /* HTGKBannerView.swift */,
 				4A1EF6D3B8A97E27F11182F19786527C /* Pod */,
 				F9374F0AFB903D2B9B554F07022D744B /* Support Files */,
 			);
@@ -598,9 +598,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				47FB8A58D6E175620D052661B1411319 /* BannerDelegate.swift in Sources */,
-				754FB9D8BF766F25436CEF8C140FA3C3 /* BannerPageControl.swift in Sources */,
-				9BC9C374151FF608611EC6300383CFB2 /* BannerView.swift in Sources */,
+				47FB8A58D6E175620D052661B1411319 /* HTGKBannerDelegate.swift in Sources */,
+				754FB9D8BF766F25436CEF8C140FA3C3 /* HTGKBannerPageControl.swift in Sources */,
+				9BC9C374151FF608611EC6300383CFB2 /* HTGKBannerView.swift in Sources */,
 				D87C8CFDEA357B2914FA1CD9144CCBB9 /* HTGKBannerKit-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

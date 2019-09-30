@@ -1,5 +1,5 @@
 //
-//  BannerPageControl.swift
+//  HTGKBannerPageControl.swift
 //  HTGKBannerKit
 //
 //  Created by yujinhai on 2019/5/16.
@@ -13,42 +13,42 @@ public enum BannerPageControlAlignment {
     case right
 }
 
-class BannerPageControl: UIControl {
+public class HTGKBannerPageControl: UIControl {
 
-    var numberOfPages: Int = 0 {
+    public var numberOfPages: Int = 0 {
         didSet { setupItems() }
     }
-    var controlSpacing: CGFloat = 8 {
+    public var controlSpacing: CGFloat = 8 {
         didSet { updateFrame() }
     }
-    var controlSize: CGSize = CGSize(width: 8, height: 8) {
+    public var controlSize: CGSize = CGSize(width: 8, height: 8) {
         didSet { updateFrame() }
     }
-    var currentControlSize: CGSize? {
+    public var currentControlSize: CGSize? {
         didSet { updateFrame() }
     }
-    var alignment: BannerPageControlAlignment = .center {
+    public var alignment: BannerPageControlAlignment = .center {
         didSet { updateFrame() }
     }
-    var itemCornerRadius: CGFloat? {
+    public var itemCornerRadius: CGFloat? {
         didSet { updateFrame() }
     }
-    var currentItemCornerRadius: CGFloat? {
+    public var currentItemCornerRadius: CGFloat? {
         didSet { updateFrame() }
     }
-    var currentPage: Int = 0 {
+    public var currentPage: Int = 0 {
         didSet { changeColor(); updateFrame() }
     }
-    var currentPageIndicatorTintColor: UIColor = UIColor.white {
+    public var currentPageIndicatorTintColor: UIColor = UIColor.white {
         didSet { changeColor() }
     }
-    var pageIndicatorTintColor: UIColor = UIColor.gray {
+    public var pageIndicatorTintColor: UIColor = UIColor.gray {
         didSet { changeColor() }
     }
-    var itemImage: UIImage? {
+    public var itemImage: UIImage? {
         didSet { changeColor() }
     }
-    var currentItemImage: UIImage? {
+    public var currentItemImage: UIImage? {
         didSet { changeColor() }
     }
     
@@ -127,7 +127,7 @@ class BannerPageControl: UIControl {
         self.changeColor()
         self.updateFrame()
     }
-    override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
+    override public func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
         let hitView = super.hitTest(point, with: event)
         if hitView == self { return nil }
         return hitView

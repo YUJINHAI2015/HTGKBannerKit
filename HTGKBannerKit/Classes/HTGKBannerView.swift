@@ -1,5 +1,5 @@
 //
-//  BannerCollectionView.swift
+//  HTGKBannerView.swift
 //  HTGKBannerKit
 //
 //  Created by yujinhai on 2019/5/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class BannerView: UIView {
+public class HTGKBannerView: UIView {
 
     // MARK: - public
     /// 定时器滑动时间
@@ -16,11 +16,11 @@ public class BannerView: UIView {
     /// 是否打开循环
     public var isOpenLoop: Bool = true
     // 代理
-    public weak var delegate: BannerDelegate? {
+    public weak var delegate: HTGKBannerDelegate? {
         didSet {
         }
     }
-    public weak var dataSource: BannerDataSource? {
+    public weak var dataSource: HTGKBannerDataSource? {
         didSet {
             if let reuseIdentifier = dataSource?.bannerViewCellIdentifier() {
                 self.reuseIdentifier = reuseIdentifier
@@ -75,8 +75,8 @@ public class BannerView: UIView {
     }()
     
     // 图片滚动指示器
-    private lazy var pageControl: BannerPageControl = {
-        let page = BannerPageControl(frame: CGRect(x: 0, y: bounds.height - pageControlHeight, width: bounds.width, height: pageControlHeight))
+    public lazy var pageControl: HTGKBannerPageControl = {
+        let page = HTGKBannerPageControl(frame: CGRect(x: 0, y: bounds.height - pageControlHeight, width: bounds.width, height: pageControlHeight))
         page.isUserInteractionEnabled = false
         page.controlSpacing = 4
         page.controlSize = CGSize(width: 5, height: 5)
@@ -125,7 +125,7 @@ public class BannerView: UIView {
 
 }
 
-extension BannerView: UICollectionViewDelegate, UICollectionViewDataSource {
+extension HTGKBannerView: UICollectionViewDelegate, UICollectionViewDataSource {
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         return self.reloadCount
@@ -148,7 +148,7 @@ extension BannerView: UICollectionViewDelegate, UICollectionViewDataSource {
     }
 }
 // MARK:- 下标相关
-extension BannerView {
+extension HTGKBannerView {
     // 当前滑动到第几个index
     func currentIndex() -> Int {
 
@@ -179,7 +179,7 @@ extension BannerView {
     }
 }
 // MARK: - 定时器相关
-extension BannerView {
+extension HTGKBannerView {
     
     // 开始拖拽时,停止定时器
     public func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {

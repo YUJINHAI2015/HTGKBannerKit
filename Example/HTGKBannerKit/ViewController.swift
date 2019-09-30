@@ -10,7 +10,7 @@ import UIKit
 
 import HTGKBannerKit
 
-class ViewController: UIViewController, BannerDelegate, BannerDataSource {
+class ViewController: UIViewController, HTGKBannerDelegate, HTGKBannerDataSource {
     
     func bannerViewCellIdentifier() -> String {
         return "BannerViewCell"
@@ -20,7 +20,7 @@ class ViewController: UIViewController, BannerDelegate, BannerDataSource {
         return BannerViewCell.self
     }
     
-    func bannerViewCell(_ cell: UICollectionViewCell, for index: NSInteger, bannerView: BannerView) {
+    func bannerViewCell(_ cell: UICollectionViewCell, for index: NSInteger, bannerView: HTGKBannerView) {
         let customCell = cell as! BannerViewCell
         customCell.setImage(imageUrl: ["ad2","Rectangle Copy","Member card_l1_baiyu","Member card_l2_huangyu"][index])
         
@@ -31,25 +31,27 @@ class ViewController: UIViewController, BannerDelegate, BannerDataSource {
         self.initUI()
     }
     func initUI() {
-        let bannerView = BannerView.init(frame: CGRect.init(x: 0, y: 100, width: self.view.frame.size.width, height: 150))
+        let bannerView = HTGKBannerView.init(frame: CGRect.init(x: 0, y: 100, width: self.view.frame.size.width, height: 150))
         bannerView.delegate = self
         bannerView.dataSource = self
         
         bannerView.isOpenLoop = false
         bannerView.timeInterval = 1
+        
+        bannerView.pageControl.controlSpacing = 8
         self.view.addSubview(bannerView)
         
     }
     
-    func bannerView(_ bannerView: BannerView, didSelectItemAt index: Int) {
+    func bannerView(_ bannerView: HTGKBannerView, didSelectItemAt index: Int) {
         print(index)
     }
     
-    func numberOfRows(_ bannerView: BannerView) -> Int {
+    func numberOfRows(_ bannerView: HTGKBannerView) -> Int {
         return 4
     }
     
-    func bannerView(_ bannerView: BannerView, cellForRowAt index: Int) -> UICollectionViewCell {
+    func bannerView(_ bannerView: HTGKBannerView, cellForRowAt index: Int) -> UICollectionViewCell {
         return UICollectionViewCell()
     }
     
