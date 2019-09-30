@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Kingfisher
 
 class BannerViewCell: UICollectionViewCell {
     
@@ -21,12 +20,7 @@ class BannerViewCell: UICollectionViewCell {
         addSubview(self.imageView)
     }
     func setImage(imageUrl: String){
-        if imageUrl.hasPrefix("http") {
-            
-            self.imageView.kf.setImage(with: URL(string: imageUrl), placeholder: nil)
-        } else {
-            self.imageView.image = UIImage(named: imageUrl)
-        }
+        self.imageView.image = UIImage(named: imageUrl)
     }
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

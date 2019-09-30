@@ -1,23 +1,16 @@
 PODS:
-  - HTGKBannerKit (0.4.0):
-    - Kingfisher (~> 4.10.0)
-  - Kingfisher (4.10.1)
+  - HTGKBannerKit (0.5.0)
 
 DEPENDENCIES:
   - HTGKBannerKit (from `../`)
-
-SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
-    - Kingfisher
 
 EXTERNAL SOURCES:
   HTGKBannerKit:
     :path: "../"
 
 SPEC CHECKSUMS:
-  HTGKBannerKit: bc961f43ab1ea2e0f7c2d354baf1eb8d7f75fdda
-  Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
+  HTGKBannerKit: cfb9e4185942380af240d4c1ba5574a53855a7b0
 
-PODFILE CHECKSUM: 98901891f4d6624900422234dba07094f352f2bb
+PODFILE CHECKSUM: 3f4b16c018ea638c7c8e911d2db7d3cc7503cb47
 
 COCOAPODS: 1.7.3
