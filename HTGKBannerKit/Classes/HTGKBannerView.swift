@@ -46,7 +46,10 @@ public class HTGKBannerView: UIView {
     }
     private var reloadCount: NSInteger { // collection刷新的个数
         get {
-            return self.itemCount * 20
+            if isOpenLoop {
+                return self.itemCount * 20
+            }
+            return self.itemCount
         }
     }
     // collectionView
