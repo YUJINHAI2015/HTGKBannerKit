@@ -35,9 +35,10 @@ public class HTGKBannerView: UIView {
     public func reloadData() {
         self.collectionView.reloadData()
     }
+    public let pageControlHeight: CGFloat = 20
+
     // MARK: - private
     private var reuseIdentifier: String = ""
-    private let pageControlHeight: CGFloat = 20
 
     private var itemCount: NSInteger = 0 { // 传入数据的个数
         didSet {
@@ -46,10 +47,7 @@ public class HTGKBannerView: UIView {
     }
     private var reloadCount: NSInteger { // collection刷新的个数
         get {
-            if isOpenLoop {
-                return self.itemCount * 20
-            }
-            return self.itemCount
+            return self.itemCount * 200
         }
     }
     // collectionView
