@@ -51,7 +51,7 @@ public class HTGKBannerView: UIView {
         }
     }
     // collectionView
-    private lazy var collectionView: UICollectionView! = {
+    public lazy var collectionView: UICollectionView! = {
         let collectionView = UICollectionView.init(frame: bounds,
                                     collectionViewLayout: self.collectionFlowLayout)
         collectionView.showsHorizontalScrollIndicator = false
