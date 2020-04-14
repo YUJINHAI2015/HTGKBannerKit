@@ -14,7 +14,13 @@ public class HTGKBannerView: UIView {
     /// 定时器滑动时间
     public var timeInterval: TimeInterval = 3
     /// 是否打开循环
-    public var isOpenLoop: Bool = true
+    public var isOpenLoop: Bool = true {
+        didSet {
+            if isOpenLoop == false {
+                timer.fireDate = Date.distantFuture
+            }
+        }
+    }
     // 代理
     public weak var delegate: HTGKBannerDelegate? {
         didSet {
